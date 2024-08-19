@@ -148,6 +148,7 @@ section .main .main_img img{
 .card img {
   width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 body h1 {
@@ -199,6 +200,41 @@ body h1 {
     .main_img img {
         width: 100%;
         height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .cards-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; /* عرض الكارت ليكون مناسب للشاشة */
+        margin: 10px 0;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 3vh; /* حجم أصغر لأزرار التحكم في الكاروسيل */
+        height: 3vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-body {
+        font-size: 14px; /* تقليل حجم الخط */
+    }
+
+    .main_img img {
+        width: 100%; /* الصورة تأخذ عرض الشاشة */
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    #carouselExampleControls1 {
+        width: 100%; /* عرض الكاروسيل يكون كامل الشاشة */
     }
 }
 
