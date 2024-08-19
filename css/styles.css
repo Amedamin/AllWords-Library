@@ -180,6 +180,27 @@ body h1 {
         flex-direction: column;
         align-items: center;
     }
+    
+    .main_tag h1, .main_tag h2, .main_tag h3, .main_tag p {
+        text-align: center;
+    }
+
+    .cards-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .main_img img {
+        width: 100%;
+        height: auto;
+    }
+}
 
 .bi-envelope {
   margin: 9px;
