@@ -60,68 +60,72 @@ section nav .social_icon i{
 }
 
  
-section .main {
+section .main{
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 50px; /* بدلاً من `top` و `left` */
-  margin-top: 60px; /* للتأكد من وجود مسافة كافية بعد الشريط العلوي */
-  position: relative; /* يمكن أن تظل relative لكن بدون `top` و `left` */
-}
-section .main h1, 
-section .main h2, 
-section .main h3 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 45px;
+  justify-content: space-around;
+  position: relative;
+  top: 0;
 }
 
-section .main h3 {
+section .main h1{
+  position: relative;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 45px;
+  top: 180px;
+  left: 120px;
+}
+
+section .main h2{
+  position: relative;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 45px;
+  top: 180px;
+  left: 220px;
+}
+
+section .main h3{
+  position: relative;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 55px;
+  top: 180px;
+  left: 40px;
   color: #976700;
 }
 
-section .main p {
-  width: 100%;
-  max-width: 680px; /* لضبط العرض على الشاشات الكبيرة والصغيرة */
+section .main p{
+  width: 680px;
   text-align: justify;
   line-height: 22px;
+  position: relative;
+  top: 190px;
+  left: 25px;
 }
 
-section .main .main_img img {
-  width: 100%; /* لتجعل الصورة متكيفة مع عرض الـ div */
-  max-width: 600px; /* لضمان عدم تمدد الصورة على الشاشات الكبيرة */
-  height: auto;
+section .main .main_img img{
+  width: 600px;
+  position: relative;
+  top: 150px;
+  left: 20px;
 }
 
 
 .cards-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
-    height: 100%;
+  margin: 15px;
+  width: 30rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
 }
 
 .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 15px #7e5702;
-}
-
-@media (max-width: 768px) {
-    .cards-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        width: 100%;
-        margin-bottom: 1rem;
-    }
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px #7e5702;
 }
 
 .card-body {
@@ -144,7 +148,6 @@ section .main .main_img img {
 .card img {
   width: 100%;
   height: auto;
-  object-fit: cover;
 }
 
 body h1 {
@@ -156,12 +159,6 @@ body h1 {
   color: #000000;
   text-decoration: underline;
 }
-
-#carouselExampleControls1 {
-  width: 100%; /* ليشغل الكاروسيل كامل عرض الشاشة */
-  margin-top: 20px; /* مسافة بينه وبين القسم السابق */
-}
-
   .carousel-control-prev,
   .carousel-control-next {
     background-color: #e1e1e1;
@@ -175,69 +172,6 @@ body h1 {
 .carousel-control-prev-icon,
 .carousel-control-next-icon{
     filter: invert(100%);
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .main_tag h1, .main_tag h2, .main_tag h3, .main_tag p {
-        text-align: center;
-    }
-
-    .cards-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        width: 100%;
-        margin-bottom: 1rem;
-    }
-
-    .main_img img {
-        width: 100%;
-        height: auto;
-    }
-}
-
-@media (max-width: 768px) {
-    .cards-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        width: 90%; /* عرض الكارت ليكون مناسب للشاشة */
-        margin: 10px 0;
-    }
-
-    .carousel-control-prev,
-    .carousel-control-next {
-        width: 3vh; /* حجم أصغر لأزرار التحكم في الكاروسيل */
-        height: 3vh;
-    }
-}
-
-@media (max-width: 768px) {
-    .card-body {
-        font-size: 14px; /* تقليل حجم الخط */
-    }
-
-    .main_img img {
-        width: 100%; /* الصورة تأخذ عرض الشاشة */
-        height: auto;
-    }
-}
-
-@media (max-width: 768px) {
-    #carouselExampleControls1 {
-        width: 100%; /* عرض الكاروسيل يكون كامل الشاشة */
-    }
 }
 
 .bi-envelope {
