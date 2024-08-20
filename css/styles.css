@@ -60,54 +60,7 @@ section nav .social_icon i{
 }
 
  
-section .main{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  position: relative;
-  top: 0;
-}
 
-section .main h1{
-  position: relative;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 45px;
-  top: 180px;
-  left: 120px;
-}
-
-section .main h2{
-  position: relative;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 45px;
-  top: 180px;
-  left: 220px;
-}
-
-section .main h3{
-  position: relative;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 55px;
-  top: 180px;
-  left: 40px;
-  color: #976700;
-}
-
-section .main p{
-  width: 680px;
-  text-align: justify;
-  line-height: 22px;
-  position: relative;
-  top: 190px;
-  left: 25px;
-}
-
-section .main .main_img img{
-  width: 600px;
-  position: relative;
-  top: 150px;
-  left: 20px;
-}
 
 
 .cards-wrapper {
