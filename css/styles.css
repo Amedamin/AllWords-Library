@@ -151,7 +151,6 @@ section .main .main_img img{
 }
 
 body h1 {
-  position: relative;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 50px;
   top: 10px;
