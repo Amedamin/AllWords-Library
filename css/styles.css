@@ -60,53 +60,36 @@ section nav .social_icon i{
 }
 
  
-section .main{
+section .main {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  position: relative;
-  top: 0;
+  justify-content: space-between;
+  padding: 50px; /* بدلاً من `top` و `left` */
+  margin-top: 60px; /* للتأكد من وجود مسافة كافية بعد الشريط العلوي */
+  position: relative; /* يمكن أن تظل relative لكن بدون `top` و `left` */
 }
-
-section .main h1{
-  position: relative;
+section .main h1, 
+section .main h2, 
+section .main h3 {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 45px;
-  top: 180px;
-  left: 120px;
 }
 
-section .main h2{
-  position: relative;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 45px;
-  top: 180px;
-  left: 220px;
-}
-
-section .main h3{
-  position: relative;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 55px;
-  top: 180px;
-  left: 40px;
+section .main h3 {
   color: #976700;
 }
 
-section .main p{
-  width: 680px;
+section .main p {
+  width: 100%;
+  max-width: 680px; /* لضبط العرض على الشاشات الكبيرة والصغيرة */
   text-align: justify;
   line-height: 22px;
-  position: relative;
-  top: 190px;
-  left: 25px;
 }
 
-section .main .main_img img{
-  width: 600px;
-  position: relative;
-  top: 150px;
-  left: 20px;
+section .main .main_img img {
+  width: 100%; /* لتجعل الصورة متكيفة مع عرض الـ div */
+  max-width: 600px; /* لضمان عدم تمدد الصورة على الشاشات الكبيرة */
+  height: auto;
 }
 
 
@@ -114,13 +97,31 @@ section .main .main_img img{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap; /* يسمح بالالتفاف عند صغر الشاشة */
 }
 
 .card {
   margin: 15px;
-  width: 30rem;
+  width: 100%; /* ضبط العرض ليكون مرنًا */
+  max-width: 30rem;
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column; /* لجعل المحتوى في عمود واحد على الشاشات الصغيرة */
+    padding: 20px;
+  }
+
+  .cards-wrapper {
+    flex-direction: column; /* تنظيم البطاقات في عمود على الشاشات الصغيرة */
+  }
+
+  .card {
+    width: 90%; /* تقليل العرض ليتناسب مع الشاشة الصغيرة */
+    margin: 10px 0;
+  }
 }
 
 .card:hover {
@@ -160,6 +161,12 @@ body h1 {
   color: #000000;
   text-decoration: underline;
 }
+
+#carouselExampleControls1 {
+  width: 100%; /* ليشغل الكاروسيل كامل عرض الشاشة */
+  margin-top: 20px; /* مسافة بينه وبين القسم السابق */
+}
+
   .carousel-control-prev,
   .carousel-control-next {
     background-color: #e1e1e1;
