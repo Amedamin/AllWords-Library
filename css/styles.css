@@ -21,32 +21,6 @@ section nav{
   justify-content: center;
 }
 
-@media (min-width: 992px) {
-    .navbar-nav {
-        display: flex;
-    }
-    
-    .navbar-toggler {
-        display: none;
-    }
-}
-
-@media (max-width: 991px) {
-    .navbar-nav {
-        display: none;
-    }
-    
-    .navbar-toggler {
-        display: block;
-    }
-
-    .navbar-collapse.collapse.show {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-}
-
 section nav .logo img{
   width: 200px;
   cursor: pointer;
