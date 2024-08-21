@@ -1,5 +1,5 @@
 .container1{
-  padding-top: 90px;
+  padding-top: 50px;
   margin-top: 90px;
 }
 
@@ -21,8 +21,30 @@ section nav{
   justify-content: center;
 }
 
-.navbar-custom .navbar-nav .nav-item {
-  margin: 0 10px; 
+@media (min-width: 992px) {
+    .navbar-nav {
+        display: flex;
+    }
+    
+    .navbar-toggler {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        display: none;
+    }
+    
+    .navbar-toggler {
+        display: block;
+    }
+
+    .navbar-collapse.collapse.show {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 }
 
 section nav .logo img{
