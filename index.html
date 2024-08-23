@@ -13,9 +13,39 @@
 <body class="d-flex flex-column min-vh-100">
     <!-- section to beginning of the page -->
     <section class="p-4 p-lg-0 pt-lg-4 pt-md-4 text-center">
+        <nav class="navbar navbar-expand-lg navbar-custom navbar-light  py-3 fixed-top">
+            <div class="container">
+                <div class="logo">
+                    <a href="#">
+                        <img src="img/IMG_2722.PNG" alt="logo" width="200" height="100">
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navmenu">
+                    <ul class="navbar-nav">
+                        <li><a href="#" >Home</a></li>
+                        <li><a href="#A">About</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Categories
+                            </a>
+                            <ul class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink">
+                              <li><a class="dropdown-item" href="#E">Engineering</a></li>
+                              <li><a class="dropdown-item" href="#M">Medical</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                          </li>
+                        <li><a href="book.html" target="_blank">serch</a></li>
+                        <li><a href="#C">comment</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
         <div class="container1">
             <div class="d-sm-flex align-items-center justify-content-between">
-                <div class="main">
+                <div class="main" id="A">
                     <h4>WELCOME</h4>
                     <h2>To</h2>
                     <h3>AllWords Library</h3>
@@ -30,31 +60,9 @@
                 </div>
             </div>
         </div>
-        <nav class="navbar navbar-expand-lg navbar-custom navbar-light  py-3 fixed-top">
-            <div class="container">
-                <div class="logo">
-                    <a href="#">
-                        <img src="img/IMG_2722.PNG" alt="logo" width="200" height="100">
-                    </a>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navmenu">
-                    <ul class="navbar-nav">
-                        <li><a href="#Home">Home</a></li>
-                        <li><a href="#About">About</a></li>
-                        <li><a href="#Featured">Featured</a></li>
-                        <li><a href="#Arrivals">Arrivals</a></li>
-                        <li><a href="#Reviews">Reviews</a></li>
-                        <li><a href="#Blog">Blog</a></li>
-                    </ul>
-                </div>
-            </div>
     </section>
     <!-- section to middle of the page -->
-
-    <h1>Engineering</h1>
+    <h1 class="text-center" id="E">Engineering</h1>
     <section class="cardd col-md-12 col-lg-12">
         <div id="carouselExampleControls1" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -166,7 +174,7 @@
             </button>
         </div>
     </section>
-    <h1> Medical</h1>
+    <h1 class="text-center" id="M">Medical</h1>
     <section class="cardd">
         <div id="Medical" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -278,7 +286,7 @@
             </button>
         </div>
     </section>
-    <h1>emg2</h1>
+    <h1 class="text-center">emg2</h1>
     <section class="cardd">
         <div id="emg2" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -390,7 +398,7 @@
             </button>
         </div>
     </section>
-    <h1>emg3</h1>
+    <h1 class="text-center">emg3</h1>
     <section class="cardd">
         <div id="emg3" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -505,26 +513,27 @@
 
 
 <!-- footer -->
-<footer class="bg-dark mt-auto">
+<footer class="bg-white mt-auto">
   <div class="container p-3">
-      <div class="row text-white">
+      <div class="row">
           <div class="col-md-4 d-flex align-items-center justify-content-start">
               <div>
                   <h4 class="pb-2"><i class="bi bi-github"></i>Hub Link</h4>
-                  <a href="https://github.com/Amedamin" target="_blank" class="lead">Ahmed_Alamin</a>
+                  <a href="https://github.com/Amedamin" target="_blank" class="lead email text-dark">Ahmed_Alamin</a>
                   <p></p>
-                  <a href="https://github.com/AsiaEasa" target="_blank" class="lead">Asia_Easa</a>
+                  <a href="https://github.com/AsiaEasa" target="_blank" class="lead email text-dark">Asia_Easa</a>
               </div>
           </div>
-          <div class="col-md-4 d-flex align-items-center justify-content-center">
-              <p class="text-danger p-1 lead mb-2">Don't forget to give me your comment</p>
-          </div>
+          <div class="col-md-4 d-flex align-items-center justify-content-center" id="C">
+            <p class="text-danger email p-1 lead mb-2">Don't forget to give me your comment</p>
+            <a class="btn btn-secondary btn-lg border" href="https://docs.google.com/forms/d/e/1FAIpQLScyJuGYejODEMcxvn-kpGVJ4htCB4dpBGIiJ-cAsxFGBlyLFQ/viewform" target="_blank"> Comment </a>
+        </div>
           <div class="col-md-4 d-flex align-items-center justify-content-end">
               <div>
                   <h4 class="pb-2"><i class="bi bi-envelope"></i> Contact Me</h4>
-                  <p class="lead mb-0">asiaeasa89@gmail.com</p>
+                  <p class="lead email text-dark mb-0">asiaeasa89@gmail.com</p>
                   <p></p>
-                  <p class="lead mb-0">ahmedqryqr@gmail.com</p>
+                  <p class="lead email text-dark mb-0">ahmedqryqr@gmail.com</p>
               </div>
           </div>
       </div>

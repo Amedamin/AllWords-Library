@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Finder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #book-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .book-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            width: 200px;
+        }
+        .book-img img {
+            width: 100%;
+        }
+        .notFound {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Book Finder</h1>
+    <input type="text" id="search-input" placeholder="Enter book genre...">
+    <button id="search-btn">Search</button>
+
+    <div id="book-list"></div>
+
+    <script>
+        const searchBtn = document.getElementById('search-btn');
+        const bookList = document.getElementById('book-list');
+
+        searchBtn.addEventListener('click', getBookList);
+
+        // get book list that matches with the genre
+        function getBookList(){
+            let searchInputTxt = document.getElementById('search-input').value.trim();
+            fetch(`https://www.googleapis.com/books/v1/volumes?q=subject:${searchInputTxt}`)
+            .then(response => response.json())
+            .then(data => {
+                let html = "";
+                if(data.items){
+                    data.items.forEach(book => {
+                        html += `
+                            <div class="book-item">
+                                <div class="book-img">
+                                    <img src="${book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : 'https://via.placeholder.com/128x192.png?text=No+Image'}" alt="Book Cover">
+                                </div>
+                                <div class="book-title">
+                                    <h3>${book.volumeInfo.title}</h3>
+                                    <p><strong>Author:</strong> ${book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Unknown'}</p>
+                                    <p><strong>Published Date:</strong> ${book.volumeInfo.publishedDate}</p>
+                                </div>
+                            </div>
+                        `;
+                    });
+                    bookList.classList.remove('notFound');
+                } else {
+                    html = "Sorry, we didn't find any books!";
+                    bookList.classList.add('notFound');
+                }
+
+                bookList.innerHTML = html;
+            });
+        }
+    </script>
+
+</body>
+</html>
