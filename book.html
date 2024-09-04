@@ -8,139 +8,92 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="img/logo.png" type="image/png">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        #book-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .book-item {
-            border: 1px solid #ddd;
-            padding: 10px;
-            width: 200px;
-        }
-        .book-img img {
-            width: 100%;
-        }
-        .notFound {
-            color: red;
-            font-weight: bold;
-        }
-    </style>
+
 </head>
 <body class="d-flex flex-column min-vh-100">
-        <!-- section to beginning of the page -->
-        <section class="p-4 p-lg-0 pt-lg-4 pt-md-4 text-center">
-            <nav class="navbar navbar-expand-lg navbar-custom navbar-light  py-3 fixed-top">
-                <div class="container">
-                    <div class="logo">
-                        <a href="#">
-                            <img src="img/IMG_2722.PNG" alt="logo" width="200" height="100">
-                        </a>
-                    </div>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navmenu">
-                        <ul class="navbar-nav">
-                            <li><a href="#" >Home</a></li>
-                            <li><a href="#C">comment</a></li>
-                        </ul>
-                    </div>
+    <!-- section to beginning of the page -->
+    <section  class="p-4 p-lg-0 pt-lg-4 pt-md-4 text-center">
+        <nav class="navbar navbar-expand-lg navbar-custom navbar-light  fixed-top">
+            <div class="container">
+                <div class="logo">
+                    <a href="#">
+                        <img src="img/IMG_2722.PNG" alt="logo" width="200" height="100">
+                    </a>
                 </div>
-            </nav>
-            <div class="container1">
-                <div class="d-sm-flex align-items-center justify-content-between">
-                    <div class="main" id="A">
-                        <h4>WELCOME</h4>
-                        <h2>To</h2>
-                        <h3>AllWords Library</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda molestias atque laborum 
-                            non fuga ex deserunt. Exercitationem velit ducimus praesentium, obcaecati hic voluptate id 
-                            tenetur fuga illum quidem omnis? Rerum?
-                        </p>
-                    </div>
-                    <div class="main_img">
-                    <img img src="img/about.png" width="300"height="300">
-                    </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navmenu">
+                    <ul class="navbar-nav">
+                        <li><a href="index.html" >Home</a></li>
+                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScyJuGYejODEMcxvn-kpGVJ4htCB4dpBGIiJ-cAsxFGBlyLFQ/viewform">comment</a></li>
+                    </ul>
                 </div>
             </div>
-        </section>
-    <h1>All Books</h1>
-    <input type="text" id="search-input" placeholder="Enter book genre...">
-    <button id="search-btn">Search</button>
-
-    <div id="book-list"></div>
-
-    <script>
-        const searchBtn = document.getElementById('search-btn');
-        const bookList = document.getElementById('book-list');
-
-        searchBtn.addEventListener('click', getBookList);
-
-        // get book list that matches with the genre
-        function getBookList(){
-            let searchInputTxt = document.getElementById('search-input').value.trim();
-            fetch(`https://www.googleapis.com/books/v1/volumes?q=subject:${searchInputTxt}`)
-            .then(response => response.json())
-            .then(data => {
-                let html = "";
-                if(data.items){
-                    data.items.forEach(book => {
-                        html += `
-                            <div class="book-item">
-                                <div class="book-img">
-                                    <img src="${book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : 'https://via.placeholder.com/128x192.png?text=No+Image'}" alt="Book Cover">
-                                </div>
-                                <div class="book-title">
-                                    <h3>${book.volumeInfo.title}</h3>
-                                    <p><strong>Author:</strong> ${book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Unknown'}</p>
-                                    <p><strong>Published Date:</strong> ${book.volumeInfo.publishedDate}</p>
-                                </div>
-                            </div>
-                        `;
-                    });
-                    bookList.classList.remove('notFound');
-                } else {
-                    html = "Sorry, we didn't find any books!";
-                    bookList.classList.add('notFound');
-                }
-
-                bookList.innerHTML = html;
-            });
-        }
-    </script>
-<footer class="bg-white mt-auto">
-    <div class="container p-3">
+        </nav>
+        <div class="container1">
+            <div class="d-sm-flex align-items-center justify-content-between">
+                <div class="main" id="A">
+                    <h4>WELCOME</h4>
+                    <h2>To</h2>
+                    <h3>AllWords Library</h3>
+                    <p>Welcome to our library, where you’ll find a diverse selection of valuable books for all kinds of readers.
+                    You’re searching for a specific title or exploring various categories, we have options to suit your needs. A book 
+                    isn’t available in digital format, don’t worry we can provide it as a physical copy instead. Our search feature to 
+                    locate the titles you need, and feel free to contact us for any book requests or further assistance. Discover your 
+                    next great read with us!
+                    </p>
+                </div>
+                <div class="main_img">
+                <img img src="img/about.png" width="300"height="300">
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- footer -->
+<footer class="footer">
+    <div class="container2">
         <div class="row">
-            <div class="col-md-4 d-flex align-items-center justify-content-start">
-                <div>
-                    <h4 class="pb-2"><i class="bi bi-github"></i>Hub Link</h4>
-                    <a href="https://github.com/Amedamin" target="_blank" class="lead email text-dark">Ahmed_Alamin</a>
-                    <p></p>
-                    <a href="https://github.com/AsiaEasa" target="_blank" class="lead email text-dark">Asia_Easa</a>
-                </div>
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li><a href="#A">about us</a></li>
+                    <li><a href="book.html">Search</a></li>
+                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScyJuGYejODEMcxvn-kpGVJ4htCB4dpBGIiJ-cAsxFGBlyLFQ/viewform">Comment</a></li>
+                    
+                </ul>
             </div>
-            <div class="col-md-4 d-flex align-items-center justify-content-center" id="C">
-              <p class="text-danger email p-1 lead mb-2">Don't forget to give me your comment</p>
-              <a class="btn btn-secondary btn-lg border" href="https://docs.google.com/forms/d/e/1FAIpQLScyJuGYejODEMcxvn-kpGVJ4htCB4dpBGIiJ-cAsxFGBlyLFQ/viewform" target="_blank"> Comment </a>
-          </div>
-            <div class="col-md-4 d-flex align-items-center justify-content-end">
-                <div>
-                    <h4 class="pb-2"><i class="bi bi-envelope"></i> Contact Me</h4>
-                    <p class="lead email text-dark mb-0">asiaeasa89@gmail.com</p>
-                    <p></p>
-                    <p class="lead email text-dark mb-0">ahmedqryqr@gmail.com</p>
+            <div class="footer-col">
+                <h4>Git Hub</h4>
+                <ul>
+                    <li><a href="https://github.com/Amedamin">Ahmed_Alamin</a></li>
+                    <li><a href="https://github.com/AsiaEasa">Asia_Easa</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><a href="https://wa.me/201553632017">Whatsapp</a></li>
+                    <li><a href="https://wa.me/249997620183">Telegram</a></li>
+                    <li><a href="mailto:asiaeasa123@gmail.com?subject=Feedback&body=I%20have%20some%20feedback%20about%20your%20website.">email</a>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/asia-easa-b2b3a4285/"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/asia.easa/"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/asiaeasa/"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/ahmed-alamin-qryqr-2b3630275-cmaro/"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100012394298624"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
     </div>
-  </footer>
+</footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous">
