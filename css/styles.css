@@ -1,6 +1,17 @@
+
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
 .container1{
   padding-top: 50px;
-  margin-top: 90px;
+  margin-top: 80px;
 }
 
 section nav{
@@ -19,12 +30,13 @@ section nav{
   flex: 1;
   display: flex;
   justify-content: center;
+  margin: 0%;
 }
 
 section nav .logo img{
   width: 200px;
   cursor: pointer;
-  margin: 0px 0;
+  justify-content: left;
 }
 
 section nav li a{
@@ -95,10 +107,10 @@ section .main p {
   text-align: left;
   padding-bottom: 20px;
 }
+
 .eee{
   padding-top: 0px;
 }
-
 
 h1 {
   padding-top: 0px;
@@ -117,7 +129,7 @@ h1 {
 }
 
 .card {
-  margin: 5px;
+  margin: 3px;
   width: 30rem;
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
@@ -146,8 +158,8 @@ h1 {
 @media (max-width: 700px) {
   .card-body {
       font-size: .3em;
-      max-height: 120px;
       padding: 2px;
+      max-height: 120px;
   }
 }
 
@@ -179,25 +191,93 @@ h1 {
   filter: invert(100%);
 }
 
-footer {
-  box-shadow: 0 0 10px #7e5702;
-  background: #ffffff;
-  color: #7e5702;
-  padding-top: 20px;
-}
 .sp {
   height: 20px;
 }
 
-footer .email {
-  font-weight: bold;
-  font-size: 15px;
+footer {
+  box-shadow: 0 0 10px #7e5702;
+  background: #ffffff;
+  color: #7e5702;
+  padding-top: 30px;
 }
-
-footer .email {
-  font-weight: bold;
-  font-size: 15px;
+.row{
+	display: flex;
+	flex-wrap: wrap;
 }
-.bi-envelope {
-margin: 9px;
+ul{
+	list-style: none;
+}
+.footer-col{
+   width: 25%;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #000000;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+  padding-left: 40px;
+  font-size: 25px;
+  font-family: serif;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left: 40px;;
+	bottom: -10px;
+	background-color: #7e5702;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #000000;
+	text-decoration: none;
+	font-weight: 300;
+	color: #271d1d;
+	display: block;
+	transition: all 0.3s ease;
+  padding-left: 30px;
+  font-size: 17px;
+}
+.footer-col ul li a:hover{
+	color: #7e5702;
+	padding-left: 8px;
+}
+.footer-col .social-links{
+  padding-left: 50px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(0, 0, 0, 0.692);
+	margin:0 10px 10px 20;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #000000;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #7e5702;
+}
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
 }
