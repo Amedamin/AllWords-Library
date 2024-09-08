@@ -1,69 +1,69 @@
 ![IMG_3887](https://github.com/user-attachments/assets/09a544f3-9ccf-4397-abe1-c4d07d35d535)
 
 
-##AllWords Library
+## AllWords Library
 
 Welcome to AllWords Library, where you'll find a diverse selection of valuable books for all kinds of readers. You're searching for a specific title or exploring various categories, we have options to suit your needs. A book isn't available in digital format, don't worry we can provide it as a physical copy instead. Our search feature to locate the titles you need, and feel free to contact us for any book requests or further assistance. Discover your next great read with us!
 
-##Purpose
+## Purpose
 
 The page offers a diverse collection of books categorized under different genres, making it easier for users to find books that match their preferences. Additionally, the page provides access to some books for purchase, allowing users to easily place orders directly through the platform. This website is designed to simplify the process of discovering and buying books, creating a convenient and efficient experience for book lovers. It also enhances their ability to share and recommend books through social media platforms like WhatsApp.
 
-##Setup
+## Setup
 
 To set up and deploy this project locally or using a cloud service like GitHub Pages or Render, follow these steps:
 
 1. Clone the repository
 
-First, clone the repository to your local machine using Git:
+  First, clone the repository to your local machine using Git:
 
 	•	git clone https://github.com/amedamin/AllWords_Library.git
  
 2. Navigate to the project directory
 
-Go to the project folder:
+  Go to the project folder:
 
 	•	cd AllWords_Library
  
 3. Install dependencies
 
-If the project requires any dependencies (like Node.js), install them using:
+  If the project requires any dependencies (like Node.js), install them using:
 
 	•	npm install
  
 4. Run the project locally
 
-If this is a web project with HTML, CSS, and JS files, you can open index.html directly in your browser or run a local server if you need it:
+  If this is a web project with HTML, CSS, and JS files, you can open index.html directly in your browser or run a local server if you need it:
 
-For example:
+  For example:
 
 	•	npm start
 
 5. Deploying to GitHub Pages
 
-If you want to deploy the project to GitHub Pages, follow these steps:
+  If you want to deploy the project to GitHub Pages, follow these steps:
 
-1-Commit and push your changes to GitHub.
+   1-Commit and push your changes to GitHub.
 
-2-In your repository settings, go to the GitHub Pages section.
+   2-In your repository settings, go to the GitHub Pages section.
 
-3-Choose the branch (usually main or gh-pages) to publish the site.
+   3-Choose the branch (usually main or gh-pages) to publish the site.
 
-4-Your site will be available at https://your-username.github.io/your-repo-name/.
+   4-Your site will be available at https://your-username.github.io/your-repo-name/.
 
 6. Deploying to Render (Optional)
 
-If you prefer using Render for deployment, follow these steps:
-1-Log in to Render and create a new web service.
+  If you prefer using Render for deployment, follow these steps:
+   1-Log in to Render and create a new web service.
 
-2-Select “Connect GitHub” and find your repository.
+   2-Select “Connect GitHub” and find your repository.
 
-3-Follow the instructions to deploy automatically from the main branch.
+   3-Follow the instructions to deploy automatically from the main branch.
 
-4-Render will build and deploy the site based on the content of your repository.
+   4-Render will build and deploy the site based on the content of your repository.
 
 
-##How to use
+## How to use
 
 The main page of the website showcases a vast collection of books spanning multiple genres, offering users a seamless browsing experience. Each book is displayed with its cover, and when users hover over a book, a detailed overlay appears, revealing essential information such as the title, author, publication date, and a brief description. This interactive feature allows users to get a quick overview of the book without navigating away from the page. When users click on a book, they are directed to a page where they can download or access the full content of the book. The platform aims to simplify the process of discovering and obtaining books, providing an intuitive and user-friendly interface for book lovers.
 
@@ -88,7 +88,7 @@ If you wish to request a physical copy of a book, you can send a message through
 	•	A new window will open with a pre-filled WhatsApp message that includes all the key details of the book.
 	•	You can then send this message to us.
 
-##Technologies Utilized
+## Technologies Utilized
 
 For styling, CSS was employed to handle fonts, colors, and layout, ensuring responsiveness across devices. 
 
