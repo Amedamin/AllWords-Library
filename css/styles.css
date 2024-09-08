@@ -65,6 +65,11 @@ section nav li a:hover{
   color: #ca8b02;
 }
 
+.dropdown-item:active, .dropdown-item:focus {
+    background-color: #ac7807 !important;
+}
+
+
 .main_img img {
   width: 380px;
   max-width: 400px;
