@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
                 let html = "";
                 if (data.items) {
-                    data.items.forEach(book => {
+                    data.items.forEach(book => { // linked to whatsapp
                         let whatsappLink = `https://wa.me/201553632017?text=I would like this book. please provide it to me%0ATitle: ${book.volumeInfo.title}%0AAuthor(s): ${book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Unknown'}%0APublished Date: ${book.volumeInfo.publishedDate || 'Unknown'}`;
                         html += `
                             <div class="book-item" onclick="window.open('${whatsappLink}', '_blank')">
