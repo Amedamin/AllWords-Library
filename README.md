@@ -50,18 +50,6 @@ To set up and deploy this project locally or using a cloud service like GitHub P
 
    4-Your site will be available at https://your-username.github.io/your-repo-name/.
 
-6. Deploying to Render (Optional)
-
-  If you prefer using Render for deployment, follow these steps:
-   1-Log in to Render and create a new web service.
-
-   2-Select “Connect GitHub” and find your repository.
-
-   3-Follow the instructions to deploy automatically from the main branch.
-
-   4-Render will build and deploy the site based on the content of your repository.
-
-
 ## How to use
 
 The main page of the website showcases a vast collection of books spanning multiple genres, offering users a seamless browsing experience. Each book is displayed with its cover, and when users hover over a book, a detailed overlay appears, revealing essential information such as the title, author, publication date, and a brief description. This interactive feature allows users to get a quick overview of the book without navigating away from the page. When users click on a book, they are directed to a page where they can download or access the full content of the book. The platform aims to simplify the process of discovering and obtaining books, providing an intuitive and user-friendly interface for book lovers.
