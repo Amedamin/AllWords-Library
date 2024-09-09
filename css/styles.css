@@ -1,5 +1,5 @@
 
-body{
+body{/* to all body */
 	line-height: 1.5;
 	font-family: 'Poppins', sans-serif;
 }
@@ -9,11 +9,11 @@ body{
 	box-sizing: border-box;
 }
 
-.container1{
+.container1{/* for beggining of the bage */
   padding-top: 30px;
   margin-top: 45px;
 }
-
+/* navbar section */
 section nav{
   width: 100%;
   display: flex;
@@ -69,7 +69,7 @@ section nav li a:hover{
     background-color: #ac7807;
 }
 
-
+/* logo */
 .main_img img {
   width: 380px;
   max-width: 400px;
@@ -79,23 +79,23 @@ section nav li a:hover{
 }
 
   /* Smooth scrolling */
-  html {
-    scroll-behavior: smooth;
+html {
+ scroll-behavior: smooth;
 }
 
 /* Basic styling for the section */
 .main {
-    position: relative;
-    padding: 20px;
-    margin: 20px 0;
+ position: relative;
+ padding: 20px;
+ margin: 20px 0;
 }
 
 /* Highlight effect */
 .highlight {
-    border: 2px solid #976700; /* Highlight border color */
-    border-radius: 20px; /* Optional: Rounded corners */
-    background-color: #f9f9f9; /* Optional: Background color to enhance visibility */
-    animation: highlight-animation 4s ease-out; /* Animation to fade out */
+ border: 2px solid #976700;
+ border-radius: 20px;
+ background-color: #f9f9f9;
+ animation: highlight-animation 4s ease-out;
 }
 
 @keyframes highlight-animation {
@@ -106,7 +106,7 @@ section nav li a:hover{
         border-color: transparent;
     }
 }
-
+/* desgin the header of the page */
 section .main h4{
   font-family: serif;
   font-size: 50px;
@@ -153,7 +153,7 @@ h1 {
   color: #000000;
 
 }
-
+/* cards and books */
 .cards-wrapper {
   display: flex;
   justify-content: center;
@@ -227,7 +227,7 @@ h1 {
 }
 
 .carousel-indicators .active {
-    background-color: black; /* Ensure the active indicator is also black */
+    background-color: black;
     opacity: 1; /* Ensure the active indicator is fully opaque */
 }
 
@@ -242,6 +242,8 @@ h1 {
 ul{
 	list-style: none;
 }
+
+/* to search page */
  .tobook{ 
   text-align: center;
   padding-bottom: 40px;
@@ -354,7 +356,7 @@ ul{
   text-align: center;
 }
 
-
+/* footer */
 .container2{
   text-align: center;
   box-shadow: 0 0 10px #7e5702;
