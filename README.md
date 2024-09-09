@@ -1,5 +1,6 @@
 ![IMG_3887](https://github.com/user-attachments/assets/a279414e-637a-4955-a870-272a863a2e65)
 
+![IMG_3923](https://github.com/user-attachments/assets/5840f1b1-ac45-42c1-909b-2b10d7dddd97)
 
 ## AllWords Library
 
@@ -71,6 +72,7 @@ If you wish to request a physical copy of a book, you can send a message through
 
 ![IMG_3890](https://github.com/user-attachments/assets/f87c3cea-222a-4886-8549-c183ae6a98a3)
 
+![IMG_3925](https://github.com/user-attachments/assets/11daec98-e3ba-4d5f-9863-2cf8d3c1f1f4)
 
 1. Search for Books by Genre
 
@@ -100,3 +102,24 @@ HTML was used to structure the content and elements of the page, providing a sol
 Font Awesome icons were incorporated to enhance the visual appeal and user interface, adding intuitive and easily recognizable icons.
 
 Additionally, JavaScript was used to integrate the Google Books API, allowing users to search for and view book details based on their preferred genre, adding interactivity and richness to our platform. 
+
+## Contribution Guidelines
+Contributions are welcome! If you have any suggestions or improvements, please fork the repository and submit a pull request. For significant changes, it’s best to open an issue first to discuss your proposed modifications.
+
+## Acknowledgements
+   - Google Books API
+For providing a robust and comprehensive API that allows us to access a vast database of book information, enabling our search and book details features.
+   - Bootstrap
+For its responsive design framework and pre-designed components, which significantly streamlined our design and layout process.
+   - Font Awesome
+For offering a wide range of icons that enhance the visual appeal and usability of our interface.
+   - Open Source Community
+For contributing to various libraries, tools, and resources that support and inspire our development efforts.
+   - Documentation and Tutorials
+A special thanks to the online documentation and tutorials that guided us through implementing various technologies and best practices.
+
+## Licensing
+You are permitted to use, modify and distribute the software as long as you include the original copyright notice.
+
+## Don't forget to give me your comment😉🔥
+![IMG_3922](https://github.com/user-attachments/assets/4f79a620-8b80-425a-8da5-6b7507cdc8dd)
