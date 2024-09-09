@@ -1,7 +1,5 @@
 ![IMG_3887](https://github.com/user-attachments/assets/a279414e-637a-4955-a870-272a863a2e65)
 
-![IMG_3923](https://github.com/user-attachments/assets/5840f1b1-ac45-42c1-909b-2b10d7dddd97)
-
 ## AllWords Library
 
 Welcome to AllWords Library, where you'll find a diverse selection of valuable books for all kinds of readers. You're searching for a specific title or exploring various categories, we have options to suit your needs. A book isn't available in digital format, don't worry we can provide it as a physical copy instead. Our search feature to locate the titles you need, and feel free to contact us for any book requests or further assistance. Discover your next great read with us!
