@@ -107,5 +107,11 @@ A special thanks to the online documentation and tutorials that guided us throug
 ## Licensing
 You are permitted to use, modify and distribute the software as long as you include the original copyright notice.
 
+## Authors
+
+Asia Easa (asiaeasa89@gmail.com)
+
+Ahmed Alamin(ahmedqryqr@gmail.com)
+
 ## Don't forget to give us your comment😉🔥
 ![IMG_3922](https://github.com/user-attachments/assets/4f79a620-8b80-425a-8da5-6b7507cdc8dd)
