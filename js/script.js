@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     BKL.classList.remove('Not_Found');
                 } else {
                     // If no books are found, display an error message
-                    HTM = "It looks like there are no books available for this genre";
+                    HTM = "Sorry, no results found for this search";
                     BKL.classList.add('Not_Found');  // Add 'notFound' class for styling purposes
                 }
 
