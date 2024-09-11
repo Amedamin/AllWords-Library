@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let SIT = SRI.value.trim();
 
         if (SIT === '') {
-            alert("Please enter a book genre to search");
+            alert("Please enter a genre of your book");
             return;
         }
 
@@ -50,11 +50,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         `;
                     });
                     // Remove 'notFound' class if books are found
-                    BKL.classList.remove('notFound');
+                    BKL.classList.remove('Not_Found');
                 } else {
                     // If no books are found, display an error message
-                    HTM = "Sorry, we didn't find any books!";
-                    BKL.classList.add('notFound');  // Add 'notFound' class for styling purposes
+                    HTM = "It looks like there are no books available for this genre";
+                    BKL.classList.add('Not_Found');  // Add 'notFound' class for styling purposes
                 }
 
                 // Insert the generated HTML into the book list container
