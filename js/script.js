@@ -1,34 +1,43 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const searchBtn = document.getElementById('search-btn');
-    const searchInput = document.getElementById('search-input');
-    const bookList = document.getElementById('book-list');
+    // Get references to the search button, search input, and book list container
+    const SRB = document.getElementById('search-btn');
+    const SRI = document.getElementById('search-input');
+    const BKL = document.getElementById('book-list');
 
-    // Trigger search when Enter is pressed
-    searchInput.addEventListener('keypress', function(event) {
+    // Trigger search when Enter is pressed in the search input field
+    SRI.addEventListener('keypress', function(event) {
         if (event.key === 'Enter') {
-            getBookList();
+            GBL();  // Call the function to get the book list
         }
     });
 
-    // Trigger search when button is clicked
-    searchBtn.addEventListener('click', getBookList);
+    // Trigger search when the search button is clicked
+    SRB.addEventListener('click', GBL);
 
-    function getBookList() {
-        let searchInputTxt = searchInput.value.trim();
-        if (searchInputTxt === '') {
+    // Function to fetch and display the book list based on the search query
+    function GBL() {
+        let SIT = SRI.value.trim();
+
+        if (SIT === '') {
             alert("Please enter a book genre to search");
             return;
         }
 
-        fetch(`https://www.googleapis.com/books/v1/volumes?q=subject:${searchInputTxt}`)
-            .then(response => response.json())
+        // Fetch book data from Google Books API based on the search query
+        fetch(`https://www.googleapis.com/books/v1/volumes?q=subject:${SIT}`)
+            .then(response => response.json())  // Parse the JSON response
             .then(data => {
-                let html = "";
+                let HTM = "";  // Initialize an empty HTML string to hold the book items
+
+                // If books are found, loop through each book item and build the HTML
                 if (data.items) {
-                    data.items.forEach(book => { // linked to whatsapp
-                        let whatsappLink = `https://wa.me/201553632017?text=I would like this book. please provide it to me%0ATitle: ${book.volumeInfo.title}%0AAuthor(s): ${book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Unknown'}%0APublished Date: ${book.volumeInfo.publishedDate || 'Unknown'}`;
-                        html += `
-                            <div class="book-item" onclick="window.open('${whatsappLink}', '_blank')">
+                    data.items.forEach(book => {
+                        // Generate a WhatsApp link to share book details
+                        let WPL = `https://wa.me/201553632017?text=I would like this book. please provide it to me%0ATitle: ${book.volumeInfo.title}%0AAuthor(s): ${book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Unknown'}%0APublished Date: ${book.volumeInfo.publishedDate || 'Unknown'}`;
+
+                        // Build the HTML for each book item, including the cover image, title, author, and published date
+                        HTM += `
+                            <div class="book-item" onclick="window.open('${WPL}', '_blank')">
                                 <div class="book-img">
                                     <img src="${book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : 'https://via.placeholder.com/128x192.png?text=No+Image'}" alt="Book Cover">
                                 </div>
@@ -40,32 +49,34 @@ document.addEventListener('DOMContentLoaded', function() {
                             </div>
                         `;
                     });
-                    bookList.classList.remove('notFound');
+                    // Remove 'notFound' class if books are found
+                    BKL.classList.remove('notFound');
                 } else {
-                    html = "Sorry, we didn't find any books!";
-                    bookList.classList.add('notFound');
+                    // If no books are found, display an error message
+                    HTM = "Sorry, we didn't find any books!";
+                    BKL.classList.add('notFound');  // Add 'notFound' class for styling purposes
                 }
 
-                bookList.innerHTML = html;
+                // Insert the generated HTML into the book list container
+                BKL.innerHTML = HTM;
             });
     }
 });
 
-
-
 document.addEventListener('DOMContentLoaded', function() {
-   
-    var buttons = document.querySelectorAll('#aboutButton, #about1');
+    // Get references to the "About" buttons
+    var BTS = document.querySelectorAll('#aboutButton, #about1');
 
-    buttons.forEach(function(button) {
-        button.addEventListener('click', function() {
-            var section = document.getElementById('b');
-            section.classList.add('highlight');
+    // Add click event listeners to the buttons
+    BTS.forEach(function(BTN) {
+        BTN.addEventListener('click', function() {
+            var SEC = document.getElementById('b');
+            SEC.classList.add('highlight');  // Add the 'highlight' class to the section
 
-            // Remove the highlight class after a few seconds
+            // Remove the 'highlight' class after a few seconds to return to normal
             setTimeout(function() {
-                section.classList.remove('highlight');
-            }, 3000); // Adjust the time as needed
+                SEC.classList.remove('highlight');
+            }, 3000);  // Highlight the section for 3 seconds
         });
     });
 });
