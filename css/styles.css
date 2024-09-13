@@ -296,6 +296,23 @@ ul{
   background-color: #7e5702;
 }
 
+#sort-option { 
+  padding: 10px; 
+  margin-left: 10px; 
+  margin: 0px; 
+  border: 2px solid #ddd; 
+  border-radius: 25px; 
+  outline: none; 
+  transition: 0.3s; 
+  font-size: 16px; 
+  margin-bottom: 20px; 
+} 
+ 
+#sort-option:focus { 
+  border-color: #7e5702; 
+  box-shadow: 0 0 8px #7e5702(0, 123, 255, 0.3); 
+}
+
 #book-list {
   display: flex;
   flex-wrap: wrap;
