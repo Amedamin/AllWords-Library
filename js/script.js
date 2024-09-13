@@ -32,6 +32,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 // If books are found, loop through each book item and build the HTML
                 if (data.items) {
                     data.items.forEach(book => {
+                        // Check if the book has pricing information
+                        let price = 'Not available';
+                        if (book.saleInfo && book.saleInfo.saleability === 'FOR_SALE') {
+                            price = `${book.saleInfo.retailPrice.amount} ${book.saleInfo.retailPrice.currencyCode}`;
+                        }
                         // Generate a WhatsApp link to share book details
                         let WPL = `https://wa.me/201553632017?text=I would like this book. please provide it to me%0ATitle: ${book.volumeInfo.title}%0AAuthor(s): ${book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Unknown'}%0APublished Date: ${book.volumeInfo.publishedDate || 'Unknown'}`;
 
@@ -45,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <h5>${book.volumeInfo.title}</h5>
                                     <p><strong>Author:</strong> ${book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Unknown'}</p>
                                     <p><strong>Published Date:</strong> ${book.volumeInfo.publishedDate}</p>
+                                    <p><strong>Price:</strong> ${price}</p>
                                 </div>
                             </div>
                         `;
