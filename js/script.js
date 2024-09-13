@@ -32,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 // If books are found, loop through each book item and build the HTML
                 if (data.items) {
                     data.items.forEach(book => {
-                        let description = book.volumeInfo.description ? book.volumeInfo.description.slice(0, 100) + '...' : 'No description available';
                         let rating = book.volumeInfo.averageRating ? `${book.volumeInfo.averageRating} / 5` : 'No rating available';
                         // Generate a WhatsApp link to share book details
                         let WPL = `https://wa.me/201553632017?text=I would like this book. please provide it to me%0ATitle: ${book.volumeInfo.title}%0AAuthor(s): ${book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Unknown'}%0APublished Date: ${book.volumeInfo.publishedDate || 'Unknown'}`;
@@ -48,8 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <p><strong>Author:</strong> ${book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Unknown'}</p>
                                     <p><strong>Published Date:</strong> ${book.volumeInfo.publishedDate}</p>
                                     <p><strong>Rating:</strong> ${rating}</p>
-                                    <p class="book-description">${description}</p>
-                                    <button class="read-more-btn" onclick="showFullDescription('${book.id}')">Read More</button>
                                 </div>
                             </div>
                         `;
