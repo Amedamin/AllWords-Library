@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     books.forEach(book => { 
                         let rating = book.volumeInfo.averageRating ? ${book.volumeInfo.averageRating} / 5 : 'No rating available'; 
                         // Generate a WhatsApp link to share book details 
-                        let WPL = https://wa.me/201553632017?text=I would like this book. please provide it to me%0ATitle: ${book.volumeInfo.title}%0AAuthor(s): ${book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Unknown'}%0APublished Date: ${book.volumeInfo.publishedDate || 'Unknown'}; 
+                        let WPL = 'https://wa.me/201553632017?text=I would like this book. please provide it to me%0ATitle: ${book.volumeInfo.title}%0AAuthor(s): ${book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Unknown'}%0APublished Date: ${book.volumeInfo.publishedDate || 'Unknown'}; 
  
                         // Build the HTML for each book item, including the cover image, title, author, and published date 
                         HTM += ` 
