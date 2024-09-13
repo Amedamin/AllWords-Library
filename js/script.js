@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // If books are found, loop through each book item and build the HTML
                 if (data.items) {
                     data.items.forEach(book => {
+                                console.log(book.saleInfo);  // added inside the loop to inspect the saleInfo object
                         // Check if the book has pricing information
                         let price = 'Not available';
                         if (book.saleInfo && book.saleInfo.saleability === 'FOR_SALE') {
